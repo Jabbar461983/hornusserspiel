@@ -4,39 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abschlag ins Ries — EHF 2027</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
 <style>
 :root{--red:#d92c45;--red7:#b22238;--green:#1d844e;--green7:#166b3f;--char:#343435;--stone:#cac9c9;--stone1:#f4f3f2;--ink:#241f22;--muted:#6b6668;
---disp:'Anton',Impact,sans-serif;--cond:'Barlow Condensed','Arial Narrow',sans-serif;--body:'Barlow',system-ui,sans-serif}
+--disp:Arial,Helvetica,sans-serif;--cond:Arial,Helvetica,sans-serif;--body:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}
-.hg{font-family:var(--body);font-size:17px;line-height:1.6;color:var(--char);background:#fff;margin:0;padding:24px 0}
+.hg{font-family:var(--body);font-size:17px;line-height:1.6;color:var(--char);background:transparent;margin:0;padding:24px 0}
 .hg .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-.hg h2{font-family:var(--disp);font-weight:400;line-height:.96;text-transform:uppercase;margin:0;color:var(--ink)}
+.hg h2{font-family:var(--disp);font-weight:700;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;margin:0;color:var(--ink)}
 .hg .over{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .hg p{margin:0;text-wrap:pretty}
 .hg .btn{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;padding:12px 22px;border:2px solid var(--red);border-radius:6px;background:var(--red);color:#fff;cursor:pointer;transition:background .12s cubic-bezier(.2,.6,.3,1),box-shadow .2s cubic-bezier(.2,.6,.3,1)}
 .hg .btn:hover{background:var(--red7);border-color:var(--red7)}
 .hg .btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
-.hg .btn.o{background:#fff;color:var(--char);border-color:var(--char)}
+.hg .btn.o{background:transparent;color:var(--char);border-color:var(--char)}
 .hg .btn.o:hover{background:var(--char);color:#fff}
 .hg .btn.g{background:none;border-color:transparent;color:var(--char)}
 .hg .btn.g:hover{background:var(--stone1)}
 .hg .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.hg .card{border:1px solid var(--stone);border-top:4px solid var(--red);border-radius:10px;background:#fff;box-shadow:0 1px 2px rgba(52,52,53,.06),0 6px 16px rgba(52,52,53,.08)}
+.hg .card{border:1px solid var(--stone);border-top:4px solid var(--red);border-radius:10px;background:transparent}
 .hg canvas{display:block;width:100%;height:auto;cursor:pointer}
 .hg label{display:block;font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.hg input[type=text],.hg input[type=email],.hg input[type=tel]{width:100%;font-family:var(--body);font-size:17px;padding:10px 12px;border:2px solid var(--stone);border-radius:6px;background:#fff;color:var(--char)}
+.hg input[type=text],.hg input[type=email],.hg input[type=tel]{width:100%;font-family:var(--body);font-size:17px;padding:10px 12px;border:2px solid var(--stone);border-radius:6px;background:transparent;color:inherit}
 .hg input:focus{outline:2px solid var(--green);outline-offset:2px;border-color:var(--char)}
 .hg .err{color:var(--red);font-size:14px;margin-top:4px;display:block}
 .hg table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 .hg th{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-align:left;background:var(--char);color:#fff;padding:10px 14px}
 .hg td{padding:10px 14px;border-bottom:1px solid var(--stone);font-size:16px}
-.hg tr:nth-child(even) td{background:var(--stone1)}
-.hg .num{text-align:right;font-family:var(--disp);font-size:20px;color:var(--green)}
-.hg .stat{border:1px solid var(--stone);border-top:4px solid var(--char);border-radius:10px;padding:14px 16px;background:#fff}
-.hg .stat b{display:block;font-family:var(--disp);font-weight:400;font-size:36px;line-height:1;font-variant-numeric:tabular-nums}
+.hg .num{text-align:right;font-weight:700;font-size:18px;color:var(--green)}
+.hg .stat{border:1px solid var(--stone);border-top:4px solid var(--char);border-radius:10px;padding:14px 16px;background:transparent}
+.hg .stat b{display:block;font-family:var(--disp);font-weight:700;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
 .hg .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .hg .lay{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:32px;align-items:start}
 .hg .cb{display:flex;gap:10px;align-items:flex-start;font-size:16px;cursor:pointer}
@@ -66,7 +62,7 @@
   <section id="s-game" class="wrap" hidden style="padding:24px 24px 56px">
     <div class="lay">
       <div style="display:flex;flex-direction:column;gap:16px">
-        <div class="card" style="overflow:hidden;background:var(--stone1)"><canvas id="stage" width="1920" height="1080"></canvas></div>
+        <div class="card" style="overflow:hidden"><canvas id="stage" width="1920" height="1080"></canvas></div>
         <div class="row">
           <button class="btn" id="act">Kraft starten</button>
           <button class="btn o" id="again">Neue Runde</button>
@@ -433,7 +429,7 @@ var D2R = Math.PI / 180;
     } else {
       c.save();
       c.fillStyle = PALETTE.charcoal;
-      c.font = '700 ' + Math.round(h * 0.3) + 'px "Barlow Condensed", "Barlow", sans-serif';
+      c.font = 'bold ' + Math.round(h * 0.3) + 'px Arial, Helvetica, sans-serif';
       c.textAlign = 'center'; c.textBaseline = 'middle';
       c.fillText(entry.label || 'WERBUNG · PLATZHALTER', x + w / 2, y + h / 2 + 1);
       c.restore();
@@ -583,10 +579,10 @@ function show(name){
 function drawRank(){
   var l=entries().slice().sort(function(a,b){return b.punkte-a.punkte||a.datum.localeCompare(b.datum)}).slice(0,20);
   if(!l.length){el('rwrap').innerHTML='<p style="color:var(--muted)">Noch keine Einträge. Spielen Sie eine Runde und tragen Sie Ihr Ergebnis ein.</p>';return}
-  var h='<div class="card" style="overflow:hidden;padding:0"><table><thead><tr><th>Rang</th><th>Name</th><th>Ort</th><th style="text-align:right">Punkte</th></tr></thead><tbody>';
+  var h='<div class="card" style="overflow:hidden;padding:0;border-top-color:var(--char)"><table><thead><tr><th>Rang</th><th>Name</th><th>Ort</th><th style="text-align:right">Punkte</th></tr></thead><tbody>';
   l.forEach(function(e,i){
     var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
-    h+='<tr><td>'+(i+1)+'</td><td>'+esc(e.vorname+' '+e.nachname)+(e.id===st.mine?' · <b>Ihr Eintrag</b>':'')+'</td><td>'+esc(e.ort||'—')+'</td><td class="num">'+e.punkte+'</td></tr>';
+    h+='<tr><td>'+(i+1)+'</td><td>'+esc(e.vorname+(e.nachname?' '+e.nachname.charAt(0)+'.':''))+(e.id===st.mine?' · <b>Ihr Eintrag</b>':'')+'</td><td>'+esc(e.ort||'—')+'</td><td class="num">'+e.punkte+'</td></tr>';
   });
   el('rwrap').innerHTML=h+'</tbody></table></div>';
 }
@@ -715,7 +711,7 @@ function draw(){
   S.tribune(c,-20,GY-26,480,4,.44);
   S.bannerWall(c,RIES-476,WW,GY-4,{entries:wall,pitch:FW,width:112,height:66,posts:true});
   S.ground(c,cam,GY,BW,BH-GY);
-  c.font='700 22px "Barlow Condensed","Barlow",sans-serif';
+  c.font='bold 22px Arial,Helvetica,sans-serif';
   c.textBaseline='top';
   for(var f=1;f<=NF;f++){
     var fx=RIES+(f-1)*FW;
